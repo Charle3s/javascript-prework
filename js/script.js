@@ -3,8 +3,20 @@ let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.
 
 console.log('Gracz wpisał: ' + playerInput);
 
-let playerMove = 'nieznany ruch';
+let playerMove = getMoveName(randomNumber)
 
+function getMoveName(argMoveId){
+    if(argMoveId == 1){
+      return 'kamień';
+    } 
+
+    else {
+      printMessage('Nie znam ruchu o id ' + argMoveId + '.');
+      return 'nieznany ruch';
+    }
+  }
+  
+/*
 if(playerInput == '1'){
   playerMove = 'kamień';
 }
@@ -14,6 +26,7 @@ if(playerInput == '2'){
   if(playerInput == '3'){
     playerMove = 'nożyce';
   }
+  */
 
 printMessage('Twój ruch to: ' + playerMove);
 // unknown move
@@ -54,6 +67,9 @@ else if( computerMove == 'nożyce' && playerMove == 'papier'){
   }
 
   //
-  else if( playerMove == 'nieznany ruch')
-  printMessage('odświerz i wybierz prawidłowy ruch od 1 do 3!');
+
+
+//   else if( playerMove == 'nieznany ruch')
+//   printMessage('odświerz i wybierz prawidłowy ruch od 1 do 3!');
+
   

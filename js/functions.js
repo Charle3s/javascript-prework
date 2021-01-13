@@ -1,3 +1,34 @@
+function getMoveName(argMoveId){
+    if(argMoveId == 1){
+      return 'kamień';
+    } 
+
+    else {
+      printMessage('Nie znam ruchu o id ' + argMoveId + '.');
+      return 'nieznany ruch';
+    }
+  }
+  
+  function displayResult(argComputerMove, argPlayerMove){
+    printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+  
+    if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
+      printMessage('Ty wygrywasz!');
+    } else {
+      printMessage('Tym razem przegrywasz :(');
+    }
+  }
+
+  let randomNumber = Math.floor(Math.random() * 3 + 1);
+
+console.log('Wylosowana liczba to: ' + randomNumber);
+
+let computerMove = 'nieznany ruch'
+
+
+
+
+
 function printMessage(msg){
 	let div = document.createElement('div');
 	div.innerHTML = msg;
@@ -7,6 +38,9 @@ function printMessage(msg){
 function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
+
+//final part ^^^^^^^^
+
 
 
 // let computerMove = `kamień`;
@@ -34,22 +68,23 @@ function clearMessages(){
 
 //trzy kroki mozna zapisac w let randomNumber = Math.floor(Math.random() * 3 + 1);
 
-let randomNumber = Math.floor(Math.random() * 3 + 1);
+// let randomNumber = Math.floor(Math.random() * 3 + 1);
 
-console.log('Wylosowana liczba to: ' + randomNumber);
+// console.log('Wylosowana liczba to: ' + randomNumber);
 
-let computerMove = 'nieznany ruch';
+// let computerMove = 'nieznany ruch';
 
-if(randomNumber == 1) {
+/*if(randomNumber == 1) {
     computerMove = 'kamień';
 }
-if(randomNumber == 2) {
+else if(randomNumber == 2) {
     computerMove = 'papier';
 }
-if(randomNumber == 3) {
+else if(randomNumber == 3) {
     computerMove = 'nożyce';
-}
-printMessage('Mój ruch to: ' + computerMove);
+} */
+
+// printMessage('Mój ruch to: ' + computerMove);
 
 
 
@@ -77,3 +112,6 @@ printMessage('Mój ruch to: ' + computerMove);
 
 // printMessage('Twój ruch to: ' + playerMove);
 
+// last part
+
+  
